@@ -1,8 +1,9 @@
 // spec.js
-//var chartPageHeader = require('../components/GoogleChartHeader');
-var chartIcons = require('../components/ChartIcons');
-var chartTitle = require('../components/ChartFrameNTitle');
-var columnChart = require('../components/ColumnChart');
+import {browser} from 'protractor';
+import chartIcons from '../components/ChartIcons';
+import chartTitle from '../components/ChartFrameNTitle';
+import columnChart from '../components/ColumnChart';
+// import chartPageHeader from 'components/GoogleChartHeader';
 
 describe('Get data from column chart in google chart home page', function () {
   beforeAll(function () {

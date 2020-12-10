@@ -1,4 +1,6 @@
-var commonUtils = function() {
+import {protractor, element, browser} from 'protractor';
+
+const commonUtils = function() {
 	this.waitAndClick = function(locator) {
 
 		var EC = protractor.ExpectedConditions;	
@@ -7,4 +9,5 @@ var commonUtils = function() {
 		expectedElement.click();
 	};
 };
-module.exports = new commonUtils();
+
+export default new commonUtils();
