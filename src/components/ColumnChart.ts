@@ -9,22 +9,24 @@ const ColumnChart = function() {
 		Expenses: by.xpath("//*[name()='svg'][@aria-label='A chart.']//*[name()='rect'][@fill='#dc3912']"),
 		ToolTip: by.xpath("//*[name()='svg'][@aria-label='A chart.']/*[name()='g'][last()] ")
 	};
-	 
-	this.getFirstExpense = function() {
-		utils.waitAndClick(LOCATORS.Expenses);	
-		let firstExp = 	element(LOCATORS.ToolTip);
-		let text = firstExp.getWebElement().getText();
-		console.log(text);
-		return text;
-  }
-  	  
-  this.getFirstSales = function() {
-		utils.waitAndClick(LOCATORS.Sales);	
-		let firstSales = 	element(LOCATORS.ToolTip);
-		let text = firstSales.getWebElement().getText();
-		console.log(text);
-		return text;
-  }
+
+	return {
+		getFirstExpense() {
+			utils.waitAndClick(LOCATORS.Expenses);	
+			let firstExp = 	element(LOCATORS.ToolTip);
+			let text = firstExp.getWebElement().getText();
+			console.log(text);
+			return text;
+		},
+				
+		getFirstSales() {
+			utils.waitAndClick(LOCATORS.Sales);	
+			let firstSales = 	element(LOCATORS.ToolTip);
+			let text = firstSales.getWebElement().getText();
+			console.log(text);
+			return text;
+		}
+	}
 };
 
-export default new ColumnChart();
+export default ColumnChart();

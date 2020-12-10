@@ -6,14 +6,16 @@ const ChartFrameNTitle = function() {
 		Title: by.css('#chart_title')
 	};
  
-  this.switchToIframe = function() {
-	  let iframeElement = element(LOCATORS.Iframe).getWebElement();
-    browser.switchTo().frame(iframeElement);  
-  } 	  
+  return {
+    switchToIframe() {
+	    let iframeElement = element(LOCATORS.Iframe).getWebElement();
+      browser.switchTo().frame(iframeElement);  
+    }, 	  
 
-  this.getTitleText = function() {
-    return element(LOCATORS.Title).getText();
-  };
+    getTitleText() {
+      return element(LOCATORS.Title).getText();
+    }
+  }
 };
 
-export default new ChartFrameNTitle();
+export default ChartFrameNTitle();

@@ -10,30 +10,32 @@ const ChartIcons = function() {
 		Tree: by.css('#chart_tree'),
 		Dashboard: by.css('#chart_dashboard')
 	};
-	
-  this.clickPieChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Pie);
-  };
 
-  this.clickLineChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Line);
-  };
-  
-  this.clickColumnChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Column);
-  };
+	return {
+		clickPieChartIcon() {
+			utils.waitAndClick(LOCATORS.Pie);
+		},
 
-  this.clickAreaChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Area);
-  };
+		clickLineChartIcon() {
+			utils.waitAndClick(LOCATORS.Line);
+		},
+		
+		clickColumnChartIcon() {
+			utils.waitAndClick(LOCATORS.Column);
+		},
 
-  this.clickTreeChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Tree);
-  };
-  
-  this.clickDashboardChartIcon = function() {
-		utils.waitAndClick(LOCATORS.Dashboard);
-  };
+		clickAreaChartIcon() {
+			utils.waitAndClick(LOCATORS.Area);
+		},
+
+		clickTreeChartIcon() {
+			utils.waitAndClick(LOCATORS.Tree);
+		},
+		
+		clickDashboardChartIcon() {
+			utils.waitAndClick(LOCATORS.Dashboard);
+		}
+	}
 };
 
-export default new ChartIcons();
+export default ChartIcons();
