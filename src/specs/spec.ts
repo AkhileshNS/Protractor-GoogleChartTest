@@ -3,6 +3,7 @@ import {browser} from 'protractor';
 import chartIcons from '../components/ChartIcons';
 import chartTitle from '../components/ChartFrameNTitle';
 import columnChart from '../components/ColumnChart';
+import SearchAndCheck from '../components/SearchAndCheck';
 // import chartPageHeader from 'components/GoogleChartHeader';
 
 describe('Get data from column chart in google chart home page', function () {
@@ -37,5 +38,10 @@ describe('Get data from column chart in google chart home page', function () {
     chartIcons.clickColumnChartIcon();
     expect(columnChart.getFirstSales()).toContain('1,000');
     expect(columnChart.getFirstExpense()).toContain('400');
-  });
+  }); // */
+
+  it("checks if first result has 'Pie Chart' when searching for 'Pie Chart'", () => {
+    browser.refresh();
+    expect(SearchAndCheck()).toContain("Pie Chart");
+  })
 });
